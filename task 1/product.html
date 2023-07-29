@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="product.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="product.js"></script>
+    <link rel="icon" href="./img/logo-icon.png" />
+    <title>Men Fashion </title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo-div" id="logo-div">
+      
+        <p class="logo-text">Cool Men</p>
+      </div>
+    </header>
+    <nav id="nav-bar">
+      <!-- don't delete! 
+            invisible paragraph for centering navbar links with grid -->
+      <p></p>
+      <!-- Navbar  links as an unordered list for accessibility -->
+      <ul class="nav-bar-links">
+        <li>
+          <div class="dropdown">
+            <p><a href="#" class="nav-link shop">Clothing</a></p>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Coats</a></li>
+                <li><a href="#">Sweaters</a></li>
+                <li><a href="#">T-Shirts</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown">
+            <p><a href="#" class="nav-link">Accessories</a></p>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#">Hats</a></li>
+                <li><a href="#">Collars</a></li>
+                <li><a href="#">Shoes</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p><a href="#about-div" class="nav-link">About</a></p>
+          </div>
+        </li>
+      </ul>
+      <div class="cart-div">
+        <img src="./img/cart.png" alt="cart-button" class="cart-button" />
+      </div>
+    </nav>
+
+    <main id="main">
+      <!-- product container (images and information) -->
+      <section class="product-section">
+        <!-- carrousel container with prev and next buttons -->
+        <div class="carrousel-section">
+          <!-- prev button -->
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <!-- carrousel -->
+          <div class="mayor-carrousel-container">
+            <div class="carrousel-container">
+              <div class="images-container">
+                <div class="carrousel-image" style="display: block">
+                  <img
+                    src="./img/carrousel/man1.png"
+                    alt="Picture 1 of man wearing product"
+                  />
+                </div>
+                <div class="carrousel-image">
+                  <img
+                    src="./img/carrousel/man2.png"
+                    alt="Picture 2 of man wearing product"
+                  />
+                </div>
+                <div class="carrousel-image">
+                  <img
+                    src="./img/carrousel/man3.png"
+                    alt="Picture 3 of dog wearing product"
+                  />
+                </div>
+                <div class="carrousel-image">
+                  <img
+                    src="./img/carrousel/product.png"
+                    alt="Picture of product 1"
+                  />
+                </div>
+                <div class="carrousel-image">
+                  <img
+                    src="./img/carrousel/product2.png"
+                    alt="Picture of product 2"
+                  />
+                </div>
+                <div class="carrousel-image">
+                  <div class="video-container">
+                    <iframe
+                      id="video"
+                      src="https://www.youtube.com/embed/7fwIirJOKJA?controls=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                 
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./img/carrousel/man2.png"
+                    style="width: 100%"
+                    onclick="currentSlide(2)"
+                    alt="Picture 2 of dog wearing product."
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./img/carrousel/man3.png"
+                    style="width: 100%"
+                    onclick="currentSlide(3)"
+                    alt="Picture 3 of dog wearing product."
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./img/carrousel/product.png"
+                    style="width: 100%"
+                    onclick="currentSlide(4)"
+                    alt="Picture of product."
+                  />
+                </div>
+                <div class="column">
+                  <img
+                    class="demo cursor"
+                    src="./img/carrousel/product2.png"
+                    style="width: 100%"
+                    onclick="currentSlide(5)"
+                    alt="Picture 2 of product."
+                  />
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <!-- next button -->
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <!-- product information (text)-->
+        <section class="product-info">
+          <div class="product-title-div">
+            <h1>Best Fashionable and affordable clothes for men</h1>
+            <p class="price">€45</p>
+          </div>
+          <div id="highlights-div">
+            <h2>Highlights</h2>
+            <ul>
+              <li>100% cotton.</li>
+              <li>Color:Varities of colors </li>
+              <li>Size: S.</li>
+            </ul>
+            <div class="add-to-cart-form-div">
+              <form id="add-to-cart-form">
+                <label for="quantity">Quantity:</label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  max="10"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="add-to-cart-btn-div">
+            <button class="add-to-cart-button">Add to cart</button>
+          </div>
+        </section>
+      </section>
+      <!-- more information section -->
+      <section class="more-information">
+        <div id="description-div">
+          <h2 id="description">Description</h2>
+          <p>
+            Men's clothing encompasses a diverse array of styles designed to cater to various occasions and personal preferences. From classic formal wear to casual and sporty outfits, the world of men's fashion offers something for everyone. Sleek suits exude sophistication, providing a polished look ideal for business meetings or formal events. Meanwhile, relaxed jeans paired with a comfy t-shirt embody a laid-back, casual vibe, perfect for everyday outings. Versatile button-down shirts effortlessly bridge the gap between dressy and casual, offering a smart choice for both work and leisure. Additionally, activewear caters to those with an active lifestyle, offering comfort and functionality during workouts or outdoor activities. With a plethora of colors, fabrics, and styles available, men's clothing allows individuals to express their unique personalities and make a statement through fashion.
+          </p>
+        </div>
+        <div id="shipping-div">
+          <h2>Shipping and return policies</h2>
+          <p>
+            <li>Cost to ship: free.</li>
+            <li>Returns & exchanges: Accepted.</li>
+          </p>
+        </div>
+      </section>
+      <!-- About section-->
+      <section class="about">
+        <div id="about-div">
+          <div class="about-title-div">
+            <img src="./img/logo-icon.png" alt="Cool Dogs logo" />
+            <h2>About Cool Dogs 🐾</h2>
+          </div>
+          <p>
+            Cool Mens is a company founded by Javed Ansari who believe that our
+             every friends from around the world deserve as much love as we can give them.
+            That's why we create clothes to keep them fashionable and budget friendly. 
+          </p>
+          <p>
+            After creating many clothes for  our friends and family, we decided
+            to create Cool Men to share our designs with the world. All of our
+            products are handmade with love and have soft and quality materials.
+            We hope all the men and their friends enjoy very much their
+            Cool Men piece.
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+     <div class="footer-content">
+        <p>
+          Disclaimer: Cool Men is a made up company and this product is not for
+          sale here. This is a web development course project.
+        </p>
+        <p>
+          Sources: all the product images are from
+          <a
+            href="https://www.etsy.com/listing/1096928007/sweater-for-a-small-dog-knitted-clothes?click_key=574cf05d471f77525631844b08819c3e21e34dfa%3A1096928007&click_sum=c5748745&ref=shop_home_recs_3"
+            target="_blank"
+            >the Etsy shop "WebThemenClothing"</a
+          >, image logo from
+          <a
+            href="https://image.shutterstock.com/image-vector/cute-corgi-dog-sunglasses-peeking-260nw-1715992204.jpg"
+            target="_blank"
+            >Shutterstock</a
+          >, video from YouTube channel
+          <a href="https://www.youtube.com/watch?v=7fwIirJOKJA" target="_blank"
+            >"Chihuahua Cedric"</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <footer class="footer">
+          <div class="zero">
+            <ul>
+              <li>Get In Touch</li>
+    
+              <p>@JAVED Ansari<br>
+                <br>
+                Ravi khand Bangla bazaar <br>
+                226012,lucknow<br>
+                -jasrmuoffical@gmail.com<br>
+                +910011223399
+            </p>
+          </div>
+         
+        </div>
+        <div class="first">
+          <ul>
+            <li>Quick shop</li>
+          <ul>
+            <li>Home</li>
+            <li>Our Shop</li>
+            <li>Details</li>
+            <li>Shopping cart</li>
+            <li>Check out</li>
+          </ul>
+        </ul>
+        </div>
+        <div>
+          <ul>
+            <li>My Account</li>
+            <ul>
+                <li>Home</li>
+                <li>Our Shop</li>
+                <li>Details</li>
+                <li>Shopping cart</li>
+                <li>Check out</li>
+              </ul>
+        </div>
+        <div class="col-md-4 mb-5">
+            <form action="">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Your Email Address">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+            <h6>Follow Us</h6>
+            <div class="follow-us">
+              <ul class="social-media">
+                  <li><a href="#" target="_blank"><img src="./img/carrousel/instagram.png" alt="Instagram"></a></li>
+                  <li><a href="#" target="_blank"><img src="./img/carrousel/twitter.png" alt="Twitter"></a></li>
+                  <li><a href="#" target="_blank"><img src="./img/carrousel/facebook.png" alt="Facebook"></a></li>
+                 
+              </ul>
+          </div>
+</div>
+<div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+<div class="col-md-6 px-xl-0">
+    <p class="mb-md-0 text-center text-md-left text-secondary">
+        &copy; <a class="text-primary" href="#">Domain</a>. All Rights Reserved.
+    </p>
+</div>
+
+</div>
+</div>
+</div> 
+</footer>
+  <!-- Footer End -->
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Contact Javascript File -->
+  <script src="mail/jqBootstrapValidation.min.js"></script>
+  <script src="mail/contact.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
